@@ -7,4 +7,4 @@ services:
     environment:
       - VAR1=abc
       - VAR2=def
-    command: /bin/bash -c "apt-get update && apt-get install -y sudo && useradd -m -s /bin/false usr1 && useradd -m -s /bin/false usr2 && mkdir -p /Share /Share/pastausr1 /Share/pastausr2 && echo 'olá usr1' > /Share/pastausr1/texto.txt && echo 'olá usr2' > /Share/pastausr2/texto.txt && chown -R usr1:usr1 /Share /home/usr1 && chown -R usr2:usr2 /Share /home/usr2 && tail -f /dev/null"
+    command: /bin/bash -c "apt-get update && apt-get install -y sudo && useradd -m -s /bin/bash usr1 && useradd -m -s /bin/bash usr2 && mkdir -p /Share /Share/pastausr1 /Share/pastausr2 && echo 'olá usr1' > /Share/pastausr1/texto.txt && echo 'olá usr2' > /Share/pastausr2/texto.txt && chown -R usr1:usr1 /Share /home/usr1 && chown -R usr2:usr2 /Share /home/usr2 && tail -f /dev/null"
